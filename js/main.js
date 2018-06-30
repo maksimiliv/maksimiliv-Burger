@@ -27,6 +27,7 @@ function initMap() {
     position: {lat: 49.987976, lng: 36.232677},
     map: map,
     title: 'MrBurger',
+    z-index: 999,
     icon: {
       url: 'icons/map-marker.png',
       scaledSize: new google.maps.Size(64, 64)
