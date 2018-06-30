@@ -1,0 +1,85 @@
+.best {
+    background-image: url('../img/bg/best-bg1.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__title--best {
+    color: #2f3234;
+    padding: 0;
+    margin-bottom: rem(50px);
+    margin-top: 5%;
+}
+
+.section__centered {
+    display: flex;
+    align-items: flex-start;
+
+    @include  tablets {
+        align-items: center;
+    }
+}
+.best__list {
+    display: flex;
+    @include phones {
+        flex-direction: column;
+      }
+    
+}
+
+.best__item {
+    margin-bottom: rem(50px);
+    padding: 0 rem(15px);
+    width: rem(290px);
+    display: flex;
+    flex-direction: column;
+    @include phones {
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    
+}
+.best__icon {
+    margin-bottom: rem(27px);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    @include phones {
+        margin-right: 20px;
+        margin-bottom: 0;
+        align-items: center;
+    }
+}
+
+.best__icon_pic {
+    display: flex;
+    align-content: center;
+}
+.best__icon_pic {
+    width: rem(98px);
+    height: rem(91px);
+}
+
+.best__title {
+    font-family: 'lifehackmedium';
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(12px);
+    @include phones {
+        text-align: left;
+    }
+}
+.best__text {
+    font-weight: normal;
+    font-size: rem(14px);
+    color: rgba(47, 50, 52, 0.8);
+    text-align: center;
+    @include phones {
+        text-align: left;
+    }
+}

@@ -1,0 +1,240 @@
+.order {
+    background-image: url('../img/bg/form.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+.form__elem {
+    display: flex;
+    
+    @include tablets() {
+        flex-direction: column;
+        padding: 0 8%;
+        }
+}
+.form__block-title {
+    color: #fff;
+}
+
+.section__title {
+    @include phones {
+        text-align: center;
+    }
+}
+.form__content {
+    width: 50%;
+    margin-right: rem(40px);
+
+    @include tablets() {
+       width: 100%;
+    }
+}
+
+.form__input {
+    border: none;
+    border-radius: rem(5px);
+    padding: rem(5px);
+    width: 100%;
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(20px);
+    @include phones() {
+        margin-bottom: 0;
+     }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__details {
+    width: 50%;
+    @include tablets() {
+        width: 100%;
+     }
+
+}
+
+
+.form__textarea {
+    border: none;
+    border-radius: rem(5px);
+    padding: rem(5px);
+    height: 38.5%;
+    width: 100%;
+    margin-bottom: 20px;
+    @include tablets() {
+        width: 100%;
+     }
+}
+.form__textarea--input {
+    @include tablets() {
+        height: rem(110px);
+     }
+    @include phones() {
+        height: rem(110px);
+        resize: none;
+    }
+}
+
+.form__imput, .form__block-title-right {
+    display: inline-block;
+    margin-right: rem(10px);
+    color: #fff;
+}
+
+
+.form__buttons {
+    display: flex;
+    @include phones {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.form__row-det {
+    margin-bottom: rem(23px);
+}
+
+.but__clear {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.order-link__form {
+    font-size: rem(12px);
+    font-weight: lighter;
+    text-decoration: none;
+    color: #fff;
+}
+.header__btn-left {
+    margin-right: rem(10px);
+    @include phones {
+        margin-right: rem(24px);
+    }
+}
+
+.form__block-title-right input[type=checkbox] {
+    background: red;
+    color: red;
+}
+.block__cent {
+    display: flex;
+    @include phones {
+        align-items: center;
+        justify-content: center;
+    }
+}
+.block__center {
+    display: flex;
+}
+
+.title__order {
+    margin-bottom: rem(90px);
+    text-align: center;
+    padding: 0;
+    @include tablets() {
+        margin-bottom: rem(1px);
+     }
+    @include phones {
+        margin-bottom: rem(5px);
+    }
+}
+
+.form__row--last {
+    @include phones {
+        margin-bottom: rem(5px);
+    }
+}
+.order__input {
+    border: none;
+    @include phones {
+        min-width: rem(98px);
+        padding: rem(10px) rem(17px);
+        border-radius: rem(5px);
+        background-color: $orange;
+        color: #fff;
+        text-decoration: none;
+        font-size: rem(13px);
+        font-weight: 500;
+        line-height: 1.42;
+        text-transform: uppercase;
+        transition: .5s;
+        margin-right: 53px;
+    }
+}
+.form__details .success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 6;
+    transition: 2s;
+    font-size: 25px;
+    background: #9c9a9a;
+    border-radius: 5px;
+    opacity: .9;
+    color: #000000;
+}
+
+.order__input input[type="submit"] {
+    min-width: rem(98px);
+    padding: rem(10px) rem(17px);
+    border-radius: rem(5px);
+    background-color: $orange;
+    color: #fff;
+    text-decoration: none;
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.42;
+    text-transform: uppercase;
+    transition: .5s;
+    margin-right: 53px;
+}
+
+//modal
+
+
+.success {
+    z-index: 999;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 23px;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 395px;
+    height: 205px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    
+    @include phones {
+        width: 95%;
+    }
+    @include phone {
+        width: 95%;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        margin-top: 23%;
+    }
+}
+

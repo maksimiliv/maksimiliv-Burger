@@ -1,0 +1,72 @@
+.wrapper {
+    width: 100%;
+    //min-width: rem(940px) + rem(20px);
+    height: 100%;
+    min-height: rem(650px);
+    position: relative;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+ .maincontent {
+     height: 100%;
+     min-height: rem(650px);
+     transition: 1s;
+     will-change: transform;
+     @include phones() {
+        min-height: rem(650px);
+    }
+ }
+
+ .container {
+     max-width: rem(940px);
+     width: 95%;
+     height: 100%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+     
+ }
+  .section {
+      height: 100vh;
+      background-color: rgba(0,0,0,0.31);
+      min-width: rem(940px);
+      min-height: rem(650px);
+    @include tablets() {
+        min-width: 100%;
+    }
+    @include phones() {
+        height: 100vh;
+    }
+  }
+  
+  .order-link {
+      min-width: rem(98px);
+      padding: rem(10px) rem(17px);
+      border-radius: rem(5px);
+      background-color: $orange;
+      color: #fff;
+      text-decoration: none;
+      font-size: rem(13px);
+      font-weight: 500;
+      line-height: 1.42;
+      text-transform: uppercase;
+      transition: .5s;
+      margin-right: 53px;
+    &:hover {
+        background-color: darken($orange, 7%);
+    }
+    @include phones() {
+        margin-right: rem(15px);
+    }
+    @include phone() {
+        margin-right: rem(-5px);
+    }
+    
+  }
+
+ 

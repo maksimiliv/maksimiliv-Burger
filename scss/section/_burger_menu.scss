@@ -1,0 +1,138 @@
+
+.burger__menu{
+    background-image: url('../img/bg/menu1.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-size: cover;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.menu-acco__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu-acco__item {
+    min-height: rem(650px);
+    height: 100%;
+    
+}
+
+.menu-acco__trigger {
+    width: 5rem;
+    display: block;
+    float: left;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    position: relative;
+    height: 100%;
+    @include phones {
+        width: 42px;
+    }
+
+}
+
+.menu-acco__trigger-title {
+    transform: rotate(-90deg) translateY(-50%);
+    color: white;
+    width: 1rem;
+    position: absolute;
+    white-space: nowrap;
+    left: 70%;
+    top: 61%;
+    z-index: 9999;
+    padding-bottom: -3rem;
+    font-size: 2.5rem;
+    font-family: "gagalinregular";
+    text-transform: uppercase;
+
+    @include tablets {
+        top: 90%;
+    }
+    @include phones {
+        top: 90%;
+    }
+}
+
+.menu-acco__content {
+    height: 100%;
+    width: 0;
+    float: left;
+    background: rgba(47,50,52,.93);
+    overflow: hidden;
+}
+
+.menu-acco__text {
+    opacity: 0;
+    color: transparent;
+    font-family: "ubuntulight";
+    font-size: .875rem;
+    padding: 3.75rem 1.875rem;
+    line-height: 1.78; 
+}
+
+.title-color__white {
+    font-family: "gagalinregular";
+    font-size: rem(72px);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: rem(96px);
+    top: rem(105px);
+
+    @include phones() {
+        left: rem(15px);
+    }
+    
+}
+
+.menu-acco__item-active {
+    .menu-acco__text {
+        transition: 2s opacity 1;
+    }
+    .menu-acco__content {
+        display: flex;
+        width: rem(640px);
+        transition: 1s;
+        @include tablets {
+            width: rem(300px);
+            //transition: .7s;
+        }
+        @include phones {
+            width: rem(280px);
+            //transition: .7s;
+        }
+        @include phone {
+            width: rem(220px);
+            //transition: .7s;
+        }
+        .menu-acco__text {
+            color: #fff;
+            opacity: 1;
+            transition: 4.6s;
+            @include phones {
+                padding-top: rem(35px);
+                padding-right: 22px;
+                padding-left: 12px;
+            }
+            @include phone {
+                padding: 2px 3px;
+                line-height: 1.42;
+            }
+        }
+    }
+}
+

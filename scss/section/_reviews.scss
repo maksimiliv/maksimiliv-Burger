@@ -1,0 +1,210 @@
+
+.reviews__list {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviwes__item {
+    width: 25%;
+    height: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    position: relative;
+
+    &:nth-child(8) {
+        background-position: right;
+    }
+
+    &:hover .reviews__hover{
+        opacity: 1;
+        transition: .9s;
+        transform: scale(1);
+    }
+
+    @include tablets() {
+        width: 50%;
+        height: 25%;
+    }
+    @include phones() {
+        width: 50%;
+        height: 25%;
+    }
+    
+}
+
+.reviews__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#454545, .7);
+    opacity: 0;
+    transition: opacity .2s;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    transition: 0.9s;
+    transform: scale(.8);
+}
+
+.reviews__container {
+    flex-basis: rem(210px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    @include tablets() {
+        flex-basis: rem(240px);
+        align-items: center;
+    }
+}
+.reviews__title {
+    font-size: rem(14px);
+    font-family: 'gagalinregular';
+    margin-bottom: rem(27px);
+    @include tablets() {
+        margin-bottom: rem(8px);
+    }
+    @include phones() {
+        margin-bottom: rem(25px);
+    }
+}
+.reviews__text {
+    font-size: rem(14px);
+    font-weight: lighter;
+    margin-bottom: 10%;
+    @include tablets() {
+        margin-bottom: 7%;
+    }
+    @include phones() {
+        display: none;
+    }
+}
+
+.order-link__reviws {
+    @include tablets() {
+        margin-right: 0;
+    }
+    @include phones() {
+       margin-right: 0;
+    }
+}
+
+
+
+
+
+
+.modal-window{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(47,50,52,.92);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-window__list{
+    background-color: #ffff;
+    border-radius: 5px;
+    height: auto;
+    width: 460px;
+    padding: 0;
+    @include phones{
+        width: 340px;
+    }@include phone{
+        width: 260px;
+    }
+}
+
+.modal-window__item{
+    display: none;
+}
+
+.first{
+    display: flex;
+    .modal-window__item-first{
+        display: block;
+    }
+}
+.second{
+    display: flex;
+    .modal-window__item-second{
+        display: block;
+    }
+}
+.third{
+    display: flex;
+    .modal-window__item-third{
+        display: block;
+    }
+}
+.fourth{
+    display: flex;
+    .modal-window__item-fourth{
+        display: block;
+    }
+}
+.five{
+    display: flex;
+    .modal-window__item-five{
+        display: block;
+    }
+}
+.sixth{
+    display: flex;
+    .modal-window__item-sixth{
+        display: block;
+    }
+}
+.seventh{
+    display: flex;
+    .modal-window__item-seventh{
+        display: block;
+    }
+}
+.eighth{
+    display: flex;
+    .modal-window__item-eighth{
+        display: block;
+    }
+}
+
+
+.modal-window__box{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 4%;
+}
+.modal-window__box-name{
+    font-family: 'gagalinregular';
+    font-size: rem(14px);
+    color: $dark;
+    margin-bottom: rem(14px);
+    text-transform: uppercase;
+    @include phones{
+        font-size: 14px;
+    }
+
+}
+.modal-window__box-content{
+    font-size: .875rem;
+    font-family: 'ubuntulight';
+    color: $dark;
+    @include phones{
+        font-size: 12px;
+    }
+}
+.modal-window__box-closeImg{
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    cursor: pointer;
+}

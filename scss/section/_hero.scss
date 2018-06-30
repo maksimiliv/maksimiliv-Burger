@@ -1,0 +1,296 @@
+.hero {
+    background-image: url('../img/bg/hero-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding-top: rem(10px);
+    width: 100%;
+    @include tablets() {
+        margin: 0;
+        width: 95%;
+        align-items: normal;
+        padding-top: 0;
+    }
+    @include phones() {
+        margin: 0;
+        width: 95%;
+        align-items: normal;
+        padding-top: 0;
+    }
+}
+
+.header__logo {
+    margin-right: auto;
+    z-index: 9999999;
+}
+
+.header__menu {
+    @include tablets() {
+        display: block;
+    }
+    @include phones() {
+        display: block;
+    }
+}
+.nav {
+    margin-right: rem(15px);
+    display: block;
+
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    @include phones() {
+        //height: 100%;
+        display: block;
+        //width: 100%;
+        //height: 100vh;
+        //position: absolute;
+        //top: 0;
+        //background: #ccc;
+        //z-index: 1;
+        //opacity: 0.5;
+        //left: 3px;
+    }
+}
+
+.nav__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 23px;
+    font-family: "Ubuntu";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.667;
+    text-align: center;
+    &::after {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        @include circle(rem(5px), #fff);
+        margin: 0 rem(12px);
+        @include phones() {
+            display: block;
+            vertical-align: middle;
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            left: 50%;
+            position: absolute;
+            margin: 0;
+        }
+        @include tablets() {
+            display: block;
+            vertical-align: middle;
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            left: 50%;
+            position: absolute;
+            margin: 0;
+        }
+    }
+    &:last-child:after {
+        display: none;
+    }
+    @include phones() {
+        display: block;
+    }
+}
+
+
+.nav__link {
+    color: #fff;
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.42;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.container {
+    @include phones() {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+.hero__container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+   
+}
+
+.hero__content {
+    display: flex;
+    margin-top: -10%;
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+    }
+    @include phones() {
+        display: flex;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero__block {
+    width: rem(455px);
+    @include tablets {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    @include phones {
+        width: rem(360px);
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+   
+
+.hero__pic-img {
+    max-width: 100%;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    @include phones {
+        width: 70%;
+    
+    }
+ 
+
+}
+.hero__pic,
+.hero__description {
+   width: 50%;
+   float: left;
+
+   @include tablets() {
+    float: none;
+    width: auto;
+    }
+    @include phones() {
+        float: none;
+        display: flex;
+        width: 100%;
+        margin-top: -35px;
+    }
+}
+
+.hero__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets() {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.section__title {
+    color: #f9b43b;
+    font-family: 'gagalinregular';
+    -webkit-font-smoothing: antialiased;
+    font-size: rem(72px);
+    font-weight: 400;
+    line-height: 1.42;
+    margin: 0;
+    padding-top: rem(60px);
+    @include tablets() {
+        padding: 0;
+    }
+    @include tablets() {
+        padding: 0;
+        font-size: rem(50px);
+    }
+}
+
+.hero__description-text {
+    color: #ffffff;
+    font-family: 'lifehackmedium';
+    font-size: rem(65px);
+    font-weight: 500;
+    line-height: 1;
+    @include tablets() {
+        padding: 0;
+    }
+    @include tablets() {
+        padding: 0;
+        font-size: rem(50px);
+    }
+}
+
+.arrow__scrol {
+    position: absolute;
+    bottom: rem(30px);
+    left: 45%;
+    //transform: translate(-50%, -50%);
+
+    @include tablets() {
+        display: block;
+    }
+    @include phones() {
+       display: block;
+    }
+    &:hover {
+        //width: rem(80px);
+        //height: rem(40px);
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        /* -webkit-transform: scale(3) translate3d(0, 0, 0); */
+        transform: scale(2) translate3d(0, 0, 0);
+        -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+    
+}
+
+.arrow__down-scrol {
+    width: rem(40px);
+    height: rem(25px);
+    display: block;
+}
+
+.header__btn {
+    @include tablets() {
+        margin-right: rem(40px);
+    }
+    @include phones() {
+       margin-right: rem(40px);
+    }
+    @include phone() {
+        margin-right: rem(40px);
+    }
+    
+}
+
+
