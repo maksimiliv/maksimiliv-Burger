@@ -28,7 +28,7 @@ function initMap() {
     map: map,
     title: 'MrBurger',
     icon: {
-      url: "icons/map-marker.svg",
+      url: "icons/map-marker.png",
       scaledSize: new google.maps.Size(64, 64)
     }
   });
