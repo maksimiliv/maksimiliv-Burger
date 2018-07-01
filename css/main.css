@@ -152,8 +152,8 @@ footer {
   background-color: rgba(0, 0, 0, .31);
   min-width: 940px;
   min-width: 58.75rem;
-  min-height: 650px;
-  min-height: 40.625rem; }
+  min-height: 600px;
+  //min-height: 40.625rem; }
   @media screen and (max-width: 768px) {
     .section {
       min-width: 100%; } }
